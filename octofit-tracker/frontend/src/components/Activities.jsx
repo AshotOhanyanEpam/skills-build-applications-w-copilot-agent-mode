@@ -5,7 +5,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = `${getApiBaseUrl()}/api/activities`;
+  const apiUrl = `${getApiBaseUrl()}/api/activities/`;
 
   useEffect(() => {
     setLoading(true);

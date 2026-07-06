@@ -5,7 +5,7 @@ function Teams() {
   const [teams, setTeams] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = `${getApiBaseUrl()}/api/teams`;
+  const apiUrl = `${getApiBaseUrl()}/api/teams/`;
 
   useEffect(() => {
     setLoading(true);

@@ -5,7 +5,7 @@ function Leaderboard() {
   const [entries, setEntries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = `${getApiBaseUrl()}/api/leaderboard`;
+  const apiUrl = `${getApiBaseUrl()}/api/leaderboard/`;
 
   useEffect(() => {
     setLoading(true);

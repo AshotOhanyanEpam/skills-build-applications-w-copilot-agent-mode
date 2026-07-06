@@ -5,7 +5,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = `${getApiBaseUrl()}/api/workouts`;
+  const apiUrl = `${getApiBaseUrl()}/api/workouts/`;
 
   useEffect(() => {
     setLoading(true);

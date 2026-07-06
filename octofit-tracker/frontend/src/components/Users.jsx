@@ -5,7 +5,7 @@ function Users() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiUrl = `${getApiBaseUrl()}/api/users`;
+  const apiUrl = `${getApiBaseUrl()}/api/users/`;
 
   useEffect(() => {
     setLoading(true);
