@@ -5,10 +5,13 @@ import teamsRouter from './routes/teams';
 import activitiesRouter from './routes/activities';
 import leaderboardRouter from './routes/leaderboard';
 import workoutsRouter from './routes/workouts';
-import { getBaseUrl } from './utils/apiUrl';
 
 const app = express();
 const port = Number(process.env.PORT || 8000);
+const codespaceName = process.env.CODESPACE_NAME;
+const baseUrl = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : 'http://localhost:8000';
 
 app.use(express.json());
 
@@ -19,7 +22,7 @@ app.get('/health', (_req, res) => {
 app.get('/api', (_req, res) => {
   res.json({
     message: 'OctoFit API',
-    baseUrl: getBaseUrl(),
+    baseUrl,
   });
 });
 
