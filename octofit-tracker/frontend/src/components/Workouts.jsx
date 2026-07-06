@@ -6,6 +6,7 @@ function Workouts() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const apiUrl = `${getApiBaseUrl()}/api/workouts/`;
+  // Example Codespaces endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/workouts/
 
   useEffect(() => {
     setLoading(true);
